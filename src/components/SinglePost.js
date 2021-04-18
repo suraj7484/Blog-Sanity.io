@@ -14,15 +14,6 @@ const SinglePost = () => {
     const [singlePost, setSinglePost] = useState(null);
     const { slug } = useParams();
 
-    const serializers = {
-        types: {
-            code: props => (
-                <pre data-language={props.node.language}>
-                    <code>{props.node.code}</code>
-                </pre>
-            )
-        }
-    }
     const BlockRenderer = props => {
         const style = props.node.style || 'normal'
 
